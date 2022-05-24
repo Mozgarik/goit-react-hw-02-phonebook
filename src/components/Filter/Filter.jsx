@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export function Filter({filterState}) {
     return (
@@ -7,4 +8,8 @@ export function Filter({filterState}) {
             </label>
         </form>
     )
+}
+
+Filter.propTypes = {
+    filterState: PropTypes.func.isRequired
 }

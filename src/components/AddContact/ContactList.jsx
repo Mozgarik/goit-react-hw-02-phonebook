@@ -1,5 +1,7 @@
 import { ContactItem } from "./ContactItem"
 import { nanoid } from "nanoid"
+import PropTypes from 'prop-types';
+
 
 export function ContactList({contacts, onDelete}) {
     return (
@@ -18,4 +20,9 @@ export function ContactList({contacts, onDelete}) {
         </div>
        
     )
+}
+
+ContactList.propTypes = {
+    onDelete: PropTypes.func.isRequired,
+    contacts: PropTypes.array.isRequired
 }
